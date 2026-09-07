@@ -1,0 +1,208 @@
+/* =====================================================================
+   AWHSC-IRB MIS - Visual identity
+   Grounded in the subject: an official ethics-review authority that
+   issues certificates, minutes, and letterhead correspondence.
+   Palette: deep teal (trust/health) + academic gold + ink on paper.
+   Signature element: the "letterhead rule" - a double hairline under
+   every page header, echoing the seal/stamp line on official IRB
+   correspondence, and a wax-seal-style status roundel.
+   ===================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap');
+
+:root {
+  --ink:        #1E2422;
+  --paper:      #F6F5F0;
+  --paper-2:    #EFEDE4;
+  --teal-900:   #08302D;
+  --teal-800:   #0B4F4A;
+  --teal-700:   #106861;
+  --gold-600:   #B8862F;
+  --gold-500:   #C79A3D;
+  --gold-100:   #F3E6C8;
+  --line:       #D8D3C4;
+  --danger:     #A23B3B;
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'Inter', -apple-system, Segoe UI, sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+}
+
+html, body { height: 100%; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-feature-settings: "tnum";
+}
+
+h1, h2, h3, h4, .display-font {
+  font-family: var(--font-display);
+  color: var(--teal-900);
+  letter-spacing: -0.01em;
+}
+
+a { color: var(--teal-700); }
+a:hover { color: var(--teal-900); }
+
+/* ---------- Letterhead-style top navigation ---------- */
+.topbar {
+  background: linear-gradient(180deg, var(--teal-900), var(--teal-800));
+  border-bottom: 3px double var(--gold-500);
+  box-shadow: 0 1px 0 rgba(0,0,0,.08);
+}
+.topbar .navbar-brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: #fff !important;
+}
+.brand-mark {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 6px;
+  background: var(--gold-500); color: var(--teal-900);
+  font-family: var(--font-mono); font-weight: 700; font-size: .72rem;
+  border: 1px solid rgba(0,0,0,.15);
+}
+.topbar .nav-link { color: rgba(255,255,255,.85) !important; font-weight: 500; }
+.topbar .nav-link:hover { color: #fff !important; }
+.role-chip { font-size: .68rem; margin-left: .35rem; vertical-align: middle; }
+
+/* ---------- Page header rule (the signature element) ---------- */
+.page-head {
+  border-bottom: 3px double var(--line);
+  padding-bottom: .6rem;
+  margin-bottom: 1.5rem;
+  display: flex; align-items: baseline; justify-content: space-between;
+  flex-wrap: wrap; gap: .5rem;
+}
+.page-head h1, .page-head h2 { margin: 0; }
+.page-eyebrow {
+  font-family: var(--font-mono);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold-600);
+}
+
+/* ---------- Cards ---------- */
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fff;
+}
+.card-stat {
+  border-left: 4px solid var(--teal-700);
+}
+.card-stat .stat-number {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  color: var(--teal-900);
+  font-weight: 600;
+}
+.card-stat .stat-label {
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: #6b6f6d;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary {
+  background: var(--teal-800); border-color: var(--teal-800);
+}
+.btn-primary:hover { background: var(--teal-900); border-color: var(--teal-900); }
+.btn-outline-primary {
+  color: var(--teal-800); border-color: var(--teal-800);
+}
+.btn-outline-primary:hover { background: var(--teal-800); border-color: var(--teal-800); }
+.btn-gold {
+  background: var(--gold-500); border-color: var(--gold-600); color: var(--teal-900); font-weight: 600;
+}
+.btn-gold:hover { background: var(--gold-600); color: #fff; }
+
+/* ---------- Status roundel (wax-seal echo) ---------- */
+.badge { font-weight: 500; letter-spacing: .01em; }
+.protocol-code {
+  font-family: var(--font-mono);
+  background: var(--gold-100);
+  color: var(--teal-900);
+  padding: .15rem .5rem;
+  border-radius: 5px;
+  border: 1px solid var(--gold-500);
+  font-size: .82rem;
+}
+
+/* ---------- Tables ---------- */
+.table thead th {
+  background: var(--paper-2);
+  color: var(--teal-900);
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  border-bottom: 2px solid var(--line);
+}
+.table-hover tbody tr:hover { background: #FBF9F2; }
+
+/* ---------- Auth pages ---------- */
+.auth-wrap {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    radial-gradient(1200px 600px at 10% -10%, rgba(199,154,61,.12), transparent),
+    var(--teal-900);
+  padding: 2rem 1rem;
+}
+.auth-card {
+  width: 100%; max-width: 440px;
+  background: var(--paper);
+  border-radius: 12px;
+  border-top: 5px solid var(--gold-500);
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  padding: 2.2rem 2rem;
+}
+.auth-seal {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--teal-800); color: var(--gold-100);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-weight: 700;
+  margin: 0 auto .75rem; border: 3px solid var(--gold-500);
+}
+
+/* ---------- Misc ---------- */
+.app-footer { color: #7a7a72; border-top: 1px solid var(--line); font-family: var(--font-body); }
+.form-label { font-weight: 500; color: var(--teal-900); }
+.text-eyebrow { font-family: var(--font-mono); font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--gold-600); }
+.timeline { list-style: none; padding-left: 0; }
+.timeline li { border-left: 2px solid var(--line); padding: 0 0 1.1rem 1rem; position: relative; }
+.timeline li::before {
+  content: ''; position: absolute; left: -6px; top: 2px;
+  width: 10px; height: 10px; border-radius: 50%; background: var(--gold-500); border: 2px solid var(--teal-900);
+}
+
+/* ---------- AI Assistant chat widget ---------- */
+#aiChatWidget { position: fixed; right: 1.25rem; bottom: 1.25rem; z-index: 1050; font-family: var(--font-body); }
+.ai-chat-toggle {
+  width: 56px; height: 56px; border-radius: 50%; border: none;
+  background: var(--teal-800); color: var(--gold-100); font-size: 1.4rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,.28); cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+}
+.ai-chat-toggle:hover { background: var(--teal-900); }
+.ai-chat-panel {
+  position: absolute; right: 0; bottom: 68px; width: 340px; max-width: 88vw;
+  height: 460px; max-height: 70vh; background: var(--paper); border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35); display: flex; flex-direction: column;
+  overflow: hidden; border-top: 4px solid var(--gold-500);
+}
+.ai-chat-header {
+  background: var(--teal-800); color: #fff; padding: .65rem .9rem;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.ai-chat-messages { flex: 1; overflow-y: auto; padding: .75rem; font-size: .88rem; }
+.ai-msg { margin-bottom: .6rem; padding: .5rem .7rem; border-radius: 10px; max-width: 88%; line-height: 1.35; }
+.ai-msg-assistant { background: #eef3f1; color: var(--teal-900); border-bottom-left-radius: 2px; }
+.ai-msg-user { background: var(--teal-800); color: #fff; margin-left: auto; border-bottom-right-radius: 2px; }
+.ai-msg-error { background: #fdecec; color: #a33; border: 1px solid #f3c9c9; font-size: .82rem; }
+.ai-chat-typing { color: #7a7a72; font-size: .8rem; }
+.ai-chat-form { display: flex; gap: .4rem; padding: .6rem; border-top: 1px solid var(--line); }
+.ai-chat-form input { flex: 1; }
