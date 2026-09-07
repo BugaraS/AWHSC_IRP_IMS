@@ -1,4 +1,4 @@
-# AWHSC-IRB Management Information System (MIS)
+# AWHSC-IRB  Information Management System (IMS)
 
 A PHP + MySQL web application for managing Institutional Review Board (IRB)
 protocol submission, screening, review, decisions, meetings, amendments,
